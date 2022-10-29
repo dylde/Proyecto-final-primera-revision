@@ -1,4 +1,4 @@
-#include<stdio.h>
+/*#include<stdio.h>
 #include<string.h>
 #include<string>
 #include<stdlib.h>
@@ -100,4 +100,117 @@ int main(){
     return 0;
 }
 
+*/
+#include <iostream>
+#include <string>
+#include <vector>
+#include <iterator>
 
+using std::cout; using std::vector;
+using std::endl; using std::string;
+using std::copy; using std::cin;
+
+int main(){
+    string s1;
+    cout << "ingrese el Texto: " << endl;
+	cin >> s1;
+	cout << "Resultado:  " << endl;
+	cout << " " << endl;
+	cout << " " << endl;
+
+
+    const char *s3 = "Entero principal (){\n\
+caracter palabraIngles[5][25];\n\
+caracter palabraEspanol[5][25];\n\
+caracter funcionalidad[1000][1000];\n\
+caracter bpalabra[25];\n\
+caracter mpalabra[25];\n\
+Entero o, j, salvarj=-1, salvari, ni=0;\n\
+Hacer{\n\
+Sistema(""cls"");\n\
+Imprimir(""Menu---"");\n\
+Imprimir(""1. Agregar palabra"");\n\
+Imprimir(""2. Mostrar palabras)"";\n\
+Imprimir(""3. Buscar palabra"");\n\
+Imprimir(""4. Modificar palabra"");\n\
+Imprimir(""5. Eliminar palabra"");\n\
+Imprimir(""6. Salir"");\n\
+Imprimir(""Seleccion: "");\n\
+Escanear(""%d,""&0);\n\
+Sistema(""cls"");\n\
+	Seleccion(o){\n\
+            Caso 1:\n\
+                j=salvarj;\n\
+                j=j+1;\n\
+                ni=ni+1;\n\
+                Imprimir(""Agregar palabra---"");\n\
+                Imprimir(""Introduzca palabra en Ingles: )"";\n\
+                Escanear(""%s,""palabraIngles[j]);\n\
+                Imprimir(""Introduzca palabra en Español: )"";\n\
+                Escanear(""%s,""palabraEspañol[j]);\n""\
+                Imprimir << ""Introduzca la Funcionalidad: ;"" \n\
+    			Escanear(""%s,""funcionalidad[j]);\n\
+                salvarj=j;\n\
+                Finalizar;\n\
+            Caso 2:\n\
+                Imprimir(""Todas las palabras)"";\n\
+                Repetir(j=0;j<ni;j++){\n\
+                Imprimir(""Palabra en Ingles: %s,palabraIngles[j]);\n\
+                Imprimir(""Palabra en Español: %s,palabraEspanol[j]);\n\
+                Imprimir(""Significado: %s,funcionalidad[j]);\n\
+                }\n\
+                Caracter_desde_teclado();\n\
+                Finalizar;\n\
+            Caso 3:\n\
+                Imprimir(""Buscar palabra---"");\n\
+                Imprimir(""Introduzca la palabra:"");\n\
+                Escanear(""%s"",bpalabra);\n\
+                Repetir(j=0;j<ni;j++){\n\
+                    SI ((Comparar cadena(palabraIngles[j],bpalabra))==0){\n\
+                        Imprimir(""Palabra en Ingles: %s"",palabraIngles[j]);\n\
+                        Imprimir(""Palabra en Español: %s"",palabraEspanol[j]);\n\
+                        Imprimir(""Significado: %s"",funcionalidad[j]);\n\
+                        Caracter desde teclado();\n\
+                    }\n\
+                }\n\
+                Finalizar;\n\
+            case 4:\n\
+                Imprimir(""Modificar palabra"");\n\
+                Imprimir(""Introduzca la palabra: "");\n\
+                Escanear(""%s"",mpalabra);\n\
+                Repetir(j=0;j<ni;j++){\n\
+                    SI ((comparar cadena(palabraIngles[j],mpalabra))==0){\n\
+                        Imprimir(""Introduzca nuevo significado: "");\n\
+                        Escanear(""%s"",funcionalidad[j]);\n\
+                    }\n\
+                }\n\
+                Finalizar;\n\
+           	Caso 5:\n\
+                Imprimir(""Eliminar palabra---"");\n\
+                Imprimir(""Introduzca palabra: "");\n\
+                Escanear(""%s"",epalabra);""\n\
+                Repetir(j=0;j<ni;j++){\n\
+                    SI ((strcmp(palabraIngles[j],epalabra))==0){\n\
+                        salvari=j;\n\
+                        Repetir (j=salvari;j<ni;j++){\n\
+                            Copia de cadena(palabraIngles[j],palabraIngles[j+1]); \n\
+                            Copia de cadena(palabraEspanol[j],palabraEspanol[j+1]);\n\
+                        }\n\
+                        ni=ni-1;\n\
+                        salvarj=j-2;\n\
+                    }\n\
+                }\n\
+                Finalizar;\n\
+            Caso 6:\n\
+                	Salir(0);\n\
+        }Caracter desde teclado();\n\
+    }Mientras (1);\n\
+    Caracter desde teclado();\n\
+    Retornar 0;\n\
+};\n\"";
+
+
+    printf("%s\n", s3);
+
+    return EXIT_SUCCESS;
+}
